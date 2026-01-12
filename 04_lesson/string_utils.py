@@ -1,7 +1,5 @@
 class StringUtils:
-    """
-    Класс с полезными утилитами для обработки и анализа строк
-    """
+  
 
 
     def capitalize(self, string: str) -> str:

@@ -45,7 +45,7 @@ class TestStringUtils:
     @pytest.mark.parametrize("string, symbol, expected", [
         ("SkyPro", "k", "SyPro"),       # Позитивный (один символ)
         ("SkyPro", "Pro", "Sky"),       # Позитивный (подстрока)
-        ("banana", "a", "bnn"),         # Позитивный (все вхождения)
+        ("banana", "a", "bnn"),         # Позитивный (вcе)
         ("SkyPro", "z", "SkyPro"),      # Позитивный (символа нет)
         ("", "a", ""),                  # Негативный (пустая строка)
     ])
