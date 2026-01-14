@@ -1,22 +1,26 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-# В 2026 году Selenium сам находит драйвер для Chrome 144
+# 1. Открыть браузер Google Chrome
+# Selenium 4 автоматически скачает нужный драйвер для версии 144
 driver = webdriver.Chrome()
 
 try:
-    # 1. Перейти на страницу
-    driver.get("uitestingplayground.com")
-    
-    # 2. Кликнуть на синюю кнопку
-    # Мы используем CSS-селектор .btn-primary, так как ID там динамический
+    # 2. Перейти на страницу
+    # Обязательно указываем полный путь с http://
+    driver.get("http://uitestingplayground.com/classattr")
+
+    # 3. Кликнуть на синюю кнопку
+    # Ищем по CSS-классу .btn-primary. 
+    # Так как ID меняется, поиск по классу — самый надежный способ.
     blue_button = driver.find_element(By.CSS_SELECTOR, ".btn-primary")
     blue_button.click()
-    
-    # 3. Обработка окна Alert
+
+    # После клика появляется модальное окно (Alert), его нужно закрыть
     alert = driver.switch_to.alert
-    print(f"Окно открыто: {alert.text}")
+    print(f"Текст уведомления: {alert.text}")
     alert.accept()
 
 finally:
+    # Закрыть браузер
     driver.quit()
