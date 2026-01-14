@@ -1,7 +1,6 @@
 class StringUtils:
-    """
-    Класс с полезными утилитами для обработки и анализа строк
-    """
+  
+
 
     def capitalize(self, string: str) -> str:
         """
@@ -10,6 +9,7 @@ class StringUtils:
         Пример: `capitilize("skypro") -> "Skypro"`
         """
         return string.capitalize()
+
 
     def trim(self, string: str) -> str:
         """
@@ -20,6 +20,7 @@ class StringUtils:
         while string.startswith(whitespace):
             string = string.removeprefix(whitespace)
         return string
+
 
     def contains(self, string: str, symbol: str) -> bool:
         """
@@ -37,7 +38,9 @@ class StringUtils:
         except ValueError:
             pass
 
+
         return res
+
 
     def delete_symbol(self, string: str, symbol: str) -> str:
         """

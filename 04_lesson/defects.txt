@@ -1,4 +1,4 @@
-ОТЧЕТ О ДЕФЕКТАХ (DEFECTS REPORT)
+ОТЧЕТ О ДЕФЕКТАХ 
 Дата: 12.01.2026
 Проект: StringUtils Library
 

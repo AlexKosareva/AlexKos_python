@@ -1,8 +1,10 @@
 import pytest
 from string_utils import StringUtils
 
+
 class TestStringUtils:
     utils = StringUtils()
+
 
     # --- Тесты capitalize ---
     @pytest.mark.parametrize("input_str, expected", [
@@ -15,6 +17,7 @@ class TestStringUtils:
     def test_capitalize_positive(self, input_str, expected):
         assert self.utils.capitalize(input_str) == expected
 
+
     # --- Тесты trim ---
     @pytest.mark.parametrize("input_str, expected", [
         ("   skypro", "skypro"),        # Позитивный (несколько пробелов)
@@ -26,6 +29,7 @@ class TestStringUtils:
     def test_trim_positive(self, input_str, expected):
         assert self.utils.trim(input_str) == expected
 
+
     # --- Тесты contains ---
     @pytest.mark.parametrize("string, symbol, expected", [
         ("SkyPro", "S", True),          # Позитивный
@@ -36,13 +40,20 @@ class TestStringUtils:
     def test_contains(self, string, symbol, expected):
         assert self.utils.contains(string, symbol) == expected
 
+
     # --- Тесты delete_symbol ---
     @pytest.mark.parametrize("string, symbol, expected", [
         ("SkyPro", "k", "SyPro"),       # Позитивный (один символ)
         ("SkyPro", "Pro", "Sky"),       # Позитивный (подстрока)
-        ("banana", "a", "bnn"),         # Позитивный (все вхождения)
+        ("banana", "a", "bnn"),         # Позитивный (вcе)
         ("SkyPro", "z", "SkyPro"),      # Позитивный (символа нет)
         ("", "a", ""),                  # Негативный (пустая строка)
     ])
     def test_delete_symbol(self, string, symbol, expected):
         assert self.utils.delete_symbol(string, symbol) == expected
+
+
+
+
+
+
