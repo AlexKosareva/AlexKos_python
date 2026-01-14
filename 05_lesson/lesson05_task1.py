@@ -7,7 +7,6 @@ driver = webdriver.Chrome()
 
 try:
     # 2. Перейти на страницу
-    # Обязательно указываем полный путь с http://
     driver.get("http://uitestingplayground.com/classattr")
 
     # 3. Кликнуть на синюю кнопку
