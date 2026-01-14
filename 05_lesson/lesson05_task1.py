@@ -11,7 +11,7 @@ try:
 
     # 3. Кликнуть на синюю кнопку
     # Ищем по CSS-классу .btn-primary. 
-    # Так как ID меняется, поиск по классу — самый надежный способ.
+
     blue_button = driver.find_element(By.CSS_SELECTOR, ".btn-primary")
     blue_button.click()
 
