@@ -1,0 +1,8 @@
+[
+  "06K_lesson/test_01_form.py::test_form_validation",
+  "06K_lesson/test_02_calc.py::test_slow_calculator",
+  "06K_lesson/test_03_shop.py::test_shop_total_cost",
+  "07_lesson/test_calculator.py::test_slow_calculator",
+  "lesson_04/calculator_abc.py::test_div_by_zero",
+  "lesson_08/test_dict.py::test_empty_dict"
+]
