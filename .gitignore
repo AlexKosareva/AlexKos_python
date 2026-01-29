@@ -1,0 +1,4 @@
+# Игнорируемые папки
+pytest cache/
+.vscode/
+__pycache__/
