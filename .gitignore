@@ -2,3 +2,4 @@
 pytest cache/
 .vscode/
 __pycache__/
+allure-results/
